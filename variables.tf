@@ -10,7 +10,7 @@ variable "principal_arns" {
   type = list(string)
 }
 
-variable "force destroy state" {
+variable "force_destroy_state" {
   description = "Force destroy the s3 bucket containing state files?"
   default = true
   type = bool
