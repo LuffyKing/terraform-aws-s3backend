@@ -51,10 +51,11 @@ resource "aws_s3_bucket" "s3_bucket" {
           kms_master_key_id = aws_kms_key.kms_key.arn
         }
     }
-    tags = {
+    
+  }
+  tags = {
         ResourceGroup = local.namespace
     }
-  }
 }
 
 resource "aws_s3_bucket_public_access_block" "s3_bucket" {
