@@ -45,7 +45,7 @@ data "aws_iam_policy_document" "policy_doc" {
     }
   statement {
       actions = [
-          "dyanomodb:GetItem",
+          "dynamodb:GetItem",
           "dynamodb:PutItem",
           "dynamodb:DeleteItem"
       ]
@@ -63,5 +63,5 @@ resource "aws_iam_policy" "iam_policy" {
 resource "aws_iam_role_policy_attachment" "policy_attach" {
   role = aws_iam_role.iam_role.name
   policy_arn = aws_iam_policy.iam_policy.arn
-  
+
 }
